@@ -6,3 +6,6 @@ jobs:
     steps:
       - name: Imprimesecreto
         run: echo "${{ secrets.TOKEN_SECRET }}"
+      
+      - name: variable
+        run: echo "${{ env.NAME }}"
