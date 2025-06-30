@@ -4,7 +4,7 @@ jobs:
   firts_job:
     strategy:
       matrix:
-        version:  "ubuntu-latest"]
+        version: [ "ubuntu-latest"]
     runs-on: ${{ matrix.version }}
 
     services:
