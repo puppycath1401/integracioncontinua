@@ -19,4 +19,4 @@ jobs:
           node-version: 18 
       
       - name: instalar dependencias
-        uses: npm install
+        run: npm install
