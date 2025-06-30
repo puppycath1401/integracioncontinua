@@ -1,4 +1,4 @@
-name: deploySecrets
+name: deploySecrets1
 on: pull
 jobs:
   firts_job:
