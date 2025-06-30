@@ -1,0 +1,11 @@
+name: deploySecrets
+
+on:
+  push: [master]
+
+jobs:
+  runs-on: ubuntu-latest
+
+  firts_job:
+    name: Imprimesecreto
+    run: echo "${{ secrets.TOKEN_SECRET }}"
