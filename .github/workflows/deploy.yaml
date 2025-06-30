@@ -1,10 +1,7 @@
 name: deploySecrets
-
-on:
-  push: [master]
-
+on: push
 jobs:
-    firts_job:
+  firts_job:
     runs-on: ubuntu-latest
     steps:
       - name: Imprimesecreto
