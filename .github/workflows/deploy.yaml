@@ -2,7 +2,10 @@ name: deploySecrets
 on: push
 jobs:
   firts_job:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: ["24.04-02", "24.04-02"]
+    runs-on: ubuntu@ ${{ matrix.version }}
     steps:
       - name: Imprimesecreto
         run: echo "${{ secrets.TOKEN_SECRET }}"
