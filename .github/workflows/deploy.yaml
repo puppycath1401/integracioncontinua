@@ -13,6 +13,8 @@ jobs:
         ports:
           - 6379:6379
     steps:
+      - name: instalarredis
+        run: sudo apt-get update -y && sudo apt-get install redis-tools -y
       - name: Imprimesecreto
         run: echo "${{ secrets.TOKEN_SECRET }}"
       
