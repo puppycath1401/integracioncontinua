@@ -4,8 +4,8 @@ on:
   push: [master]
 
 jobs:
-  runs-on: ubuntu-latest
-
-  firts_job:
-    name: Imprimesecreto
-    run: echo "${{ secrets.TOKEN_SECRET }}"
+    firts_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimesecreto
+        run: echo "${{ secrets.TOKEN_SECRET }}"
