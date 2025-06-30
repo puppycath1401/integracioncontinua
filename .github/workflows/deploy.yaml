@@ -1,5 +1,5 @@
 name: deploySecrets
-on: push
+on: pull
 jobs:
   firts_job:
     strategy:
@@ -24,7 +24,10 @@ jobs:
       - name: redis
         run: sudo redis-cli -h localhost -p 6379
       
+
       - name: setup
         uses: actions/setup-node@v4
         with:
           node-version: 18 
+
+      - name:

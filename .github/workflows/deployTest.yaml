@@ -1,0 +1,22 @@
+name: deploySecrets
+on: push
+jobs:
+  firts_job:
+    strategy:
+      matrix:
+        version: [ "ubuntu-latest"]
+    runs-on: ${{ matrix.version }}
+    steps:
+      - name: variable
+        run: echo "${{ vars.NAME }}"
+      
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 
+      
+      - name: instalar dependencias
+        uses: npm install
