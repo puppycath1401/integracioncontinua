@@ -19,6 +19,9 @@ jobs:
       - name: variable
         run: echo "${{ vars.NAME }}"
       
+      - name: redis
+        run: redis-cli -h localhost -p 6379
+      
       - name: setup
         uses: actions/setup-node@v4
         with:
